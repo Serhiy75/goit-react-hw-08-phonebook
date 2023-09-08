@@ -1,6 +1,6 @@
 import { FormContacts } from './FormContacts/FormContacts';
-import { ContactList } from './ContactList/ContactList';
 import { FilterContact } from './FilterContact/FilterContact';
+import { ContactList } from './ContactList/ContactList';
 import css from './App.module.css';
 
 export const App = () => {
