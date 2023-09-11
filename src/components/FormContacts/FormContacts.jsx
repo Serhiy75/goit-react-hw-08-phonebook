@@ -1,20 +1,12 @@
 import React from 'react';
 import css from './FormContact.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectors';
-import { addContact } from 'redux/operations';
-// import { nanoid } from 'nanoid';
-
-// import { useEffect } from 'react';
-// import { fetchContact } from 'redux/operations';
+import { selectContacts } from 'redux/contacts/selectors';
+import { addContact } from 'redux/contacts/operations';
 
 export const FormContacts = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
-
-  // useEffect(() => {
-  //   dispatch(fetchContact());
-  // }, [dispatch]);
 
   const handleSubmit = evt => {
     evt.preventDefault();
@@ -35,7 +27,7 @@ export const FormContacts = () => {
       dispatch(addContact(contact));
     }
   };
-  console.log(contacts);
+  // console.log(contacts);
   return (
     <form onSubmit={handleSubmit} className={css.forma}>
       <label>Name</label>
