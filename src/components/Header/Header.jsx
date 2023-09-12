@@ -1,8 +1,9 @@
-import { Suspense } from 'react';
+// import { Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, Outlet } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { logout } from 'redux/auth/operations';
 import { selectUser } from 'redux/auth/selectors';
+import css from './Header.module.css';
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -10,13 +11,14 @@ export const Header = () => {
 
   return (
     <>
-      <header>
-        <p>Welocome: {user.name}</p>
-        <button onClick={() => dispatch(logout())}>Logout</button>
-        <nav>
+      <header className={css.header}>
+        {/* <nav>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contacts">Contacts</NavLink>
             </li>
             <li>
               <NavLink to="/login">Login</NavLink>
@@ -24,15 +26,14 @@ export const Header = () => {
             <li>
               <NavLink to="/register">Register</NavLink>
             </li>
-            <li>
-              <NavLink to="/contacts">Contacts</NavLink>
-            </li>
           </ul>
-        </nav>
+        </nav> */}
+        <p>Welocome: {user.name}</p>
+        <button onClick={() => dispatch(logout())}>Logout</button>
       </header>
-      <Suspense fallback={<p>Loading...</p>}>
+      {/* <Suspense fallback={<p>Loading...</p>}>
         <Outlet />
-      </Suspense>
+      </Suspense> */}
     </>
   );
 };
