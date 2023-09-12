@@ -1,1 +1,1 @@
-export * from 'pages/Todos';
+export * from 'pages/Contacts';
