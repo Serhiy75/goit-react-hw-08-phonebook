@@ -13,7 +13,7 @@ export const UserMenu = () => {
       <ul className={css.userlist}>
         <li className={css.useritem}>
           <NavLink to="/contacts" className={css.navlink}>
-            Contacts 📞
+            Contacts
           </NavLink>
         </li>
         <p className={css.welcome}>Welcome: {user.name}</p>
