@@ -1,8 +1,19 @@
-/* .header {
+.header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  margin: 20px;
-  border-bottom: 2px solid #2a363b;
-  gap: 10px;
-} */
+  margin: 0 20px;
+  border-bottom: 2px solid whitesmoke;
+}
+.navigate {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.homelink {
+  padding: 20px 0;
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 700;
+}

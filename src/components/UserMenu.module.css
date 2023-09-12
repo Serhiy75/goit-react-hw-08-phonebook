@@ -1,0 +1,16 @@
+.userlist {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+}
+.navlink {
+  font-weight: 700;
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 300px;
+}
+.welcome {
+  color: whitesmoke;
+}

@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(./bc.jpg) 0% 0% / cover rgb(48, 46, 50);
 }
 
 code {

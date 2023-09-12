@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from 'redux/auth/operations';
 import { selectUser } from 'redux/auth/selectors';
 import { NavLink } from 'react-router-dom';
+import css from './UserMenu.module.css';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -9,11 +10,13 @@ export const UserMenu = () => {
 
   return (
     <>
-      <ul>
-        <li>
-          <NavLink to="/contacts">Contacts</NavLink>
+      <ul className={css.userlist}>
+        <li className={css.useritem}>
+          <NavLink to="/contacts" className={css.navlink}>
+            Contacts 📞
+          </NavLink>
         </li>
-        <p>Welocome: {user.name}</p>
+        <p className={css.welcome}>Welcome: {user.name}</p>
         <button onClick={() => dispatch(logout())}>Logout</button>
       </ul>
     </>
