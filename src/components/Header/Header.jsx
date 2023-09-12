@@ -1,39 +1,24 @@
-// import { Suspense } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-// import { NavLink } from 'react-router-dom';
-import { logout } from 'redux/auth/operations';
-import { selectUser } from 'redux/auth/selectors';
-import css from './Header.module.css';
+import { AuthNav } from 'components/AuthNav/AuthNav';
+import { UserMenu } from 'components/UserMenu';
+import { Suspense } from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink, Outlet } from 'react-router-dom';
+import { selectIsLogin } from 'redux/auth/selectors';
+// import css from './Header.module.css';
 
 export const Header = () => {
-  const dispatch = useDispatch();
-  const user = useSelector(selectUser);
-
+  const isLogin = useSelector(selectIsLogin);
   return (
     <>
-      <header className={css.header}>
-        {/* <nav>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contacts">Contacts</NavLink>
-            </li>
-            <li>
-              <NavLink to="/login">Login</NavLink>
-            </li>
-            <li>
-              <NavLink to="/register">Register</NavLink>
-            </li>
-          </ul>
-        </nav> */}
-        <p>Welocome: {user.name}</p>
-        <button onClick={() => dispatch(logout())}>Logout</button>
+      <header>
+        <nav>
+          <NavLink to="/">Home</NavLink>
+          {isLogin ? <UserMenu /> : <AuthNav />}
+        </nav>
       </header>
-      {/* <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<p>Loading...</p>}>
         <Outlet />
-      </Suspense> */}
+      </Suspense>
     </>
   );
 };

@@ -1,5 +1,3 @@
-import { Header } from 'components/Header/Header';
-
 const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
@@ -17,7 +15,6 @@ const styles = {
 export default function Home() {
   return (
     <>
-      <Header />
       <div style={styles.container}>
         <h1 style={styles.title}>Welcome to phonebook </h1>
       </div>
