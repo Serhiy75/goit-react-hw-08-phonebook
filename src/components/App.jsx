@@ -1,6 +1,6 @@
 import { FormContacts } from './FormContacts/FormContacts';
-import { FilterContact } from './FilterContact/FilterContact';
-import { ContactList } from './ContactList/ContactList';
+// import { FilterContact } from './FilterContact/FilterContact';
+// import { ContactList } from './ContactList/ContactList';
 import css from './App.module.css';
 import { Route, Routes } from 'react-router-dom';
 import Register from 'pages/Register';
@@ -18,8 +18,8 @@ export const App = () => {
           <Route path="formContacts" element={<FormContacts />}>
             <h2>Contacts</h2>
           </Route>
-          <Route path="filterContact" element={<FilterContact />} />
-          <Route path="contactList" element={<ContactList />} />
+          {/* <Route path="filterContact" element={<FilterContact />} />
+          <Route path="contactList" element={<ContactList />} /> */}
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
         </Route>
