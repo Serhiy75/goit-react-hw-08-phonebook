@@ -31,7 +31,7 @@ export const ContactList = () => {
         return (
           <li key={id} className={css.listitem}>
             <span>
-              {name}: {number} || {phone}
+              {name}: {number} {phone}
             </span>
             <button
               type="button"
