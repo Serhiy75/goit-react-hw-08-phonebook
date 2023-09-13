@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
-  border-bottom: 2px solid whitesmoke;
+  margin: 0 100px;
 }
 .navigate {
   display: flex;

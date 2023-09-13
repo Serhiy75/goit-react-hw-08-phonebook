@@ -21,19 +21,20 @@ const Login = () => {
   return (
     <div className={css.login}>
       <form className={css.form} onSubmit={handleSubmit}>
-        <label className={css.label}>
-          Email
-          <input type="email" name="email" placeholder="Enter email" />
-        </label>
-        <label className={css.label}>
-          Password
+        <h2 className={css.title}>Login form</h2>
+        <div className={css.label}>
+          <input type="email" name="email" placeholder="Enter your email" />
+        </div>
+        <div className={css.label}>
           <input
             type="password"
             name="password"
-            placeholder="Enter passwoerd"
+            placeholder="Enter your password"
           />
-        </label>
-        <button type="submit">Login</button>
+        </div>
+        <button type="submit" className={css.button}>
+          Login
+        </button>
       </form>
     </div>
   );
