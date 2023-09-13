@@ -1,10 +1,16 @@
 .container {
-  padding: 50px;
-  border: 2px solid black;
-  width: 300px;
-  margin-top: 50px;
-  margin-left: 50px;
-  border-radius: 8px;
-  background-color: whitesmoke;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 380px;
+
+  padding: 50px 20px;
+  margin: 130px auto 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  color: #d9d9d9;
 }

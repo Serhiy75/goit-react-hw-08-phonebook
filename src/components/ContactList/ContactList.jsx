@@ -27,16 +27,16 @@ export const ContactList = () => {
 
   return (
     <ul className={css.listname}>
-      {filterContact.map(({ id, name, phone }) => {
+      {filterContact.map(({ id, name, number, phone }) => {
         return (
           <li key={id} className={css.listitem}>
             <span>
-              {name}: {phone}
+              {name}: {number} || {phone}
             </span>
             <button
-              type="button "
+              type="button"
               onClick={() => onDeleteContact(id)}
-              className={css.btn}
+              className={css.button}
             >
               Delete
             </button>

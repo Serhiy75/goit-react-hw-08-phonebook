@@ -16,8 +16,7 @@ body {
   ); */
   background-image: url('./images/mac.jpeg');
   background-size: cover;
-  background-position: cover;
-  background-repeat: no-repeat;
+
   background-color: rgba(0, 0, 0, 0.6);
 }
 

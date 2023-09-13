@@ -7,9 +7,9 @@ export const Phonebook = () => {
   return (
     <>
       <div className={css.container}>
-        <h1 className="">Phonebook 📞</h1>
+        <h1 className={css.title}>Phonebook</h1>
         <FormContacts />
-        <h2>Contacts</h2>
+        <h2 className={css.title}>Contacts</h2>
         <FilterContact />
         <ContactList />
       </div>

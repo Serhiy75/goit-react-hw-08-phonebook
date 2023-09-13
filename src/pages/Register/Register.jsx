@@ -46,10 +46,10 @@ const Register = () => {
             className={css.input}
           />
         </div>
+        <button type="submit" className={css.button}>
+          Register
+        </button>
       </form>
-      <button type="submit" className={css.button}>
-        Register
-      </button>
     </div>
   );
 };
