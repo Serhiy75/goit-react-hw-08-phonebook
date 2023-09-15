@@ -3,7 +3,7 @@ import css from './Phonebook.module.css';
 import { FilterContact } from 'components/FilterContact/FilterContact';
 import { ContactList } from 'components/ContactList/ContactList';
 
-export const Phonebook = () => {
+const Phonebook = () => {
   return (
     <>
       <div className={css.container}>
@@ -16,3 +16,4 @@ export const Phonebook = () => {
     </>
   );
 };
+export default Phonebook;
